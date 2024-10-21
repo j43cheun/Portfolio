@@ -4,8 +4,17 @@ export default defineNuxtConfig({
     baseURL: '/portfolio/'
   },
 
+  css: ['~/assets/css/main.css'],
+
   devtools: { enabled: true },
   modules: ['@nuxt/content'],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 
   routeRules: {
     '/': { prerender: true }
